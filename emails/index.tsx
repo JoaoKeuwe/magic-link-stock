@@ -6,10 +6,16 @@ import {
 } from "@react-email/components";
 import Table from "../components/table";
 import * as React from "react";
+import { render } from "@react-email/render";
 
+const html = render(<Email />, {
+  pretty: true,
+});
 export default function Email() {
 
-  
+
+  console.log("teste", html);
+
   const data1 = [
     { label: "CNPJ", value: "000000000-00" },
     { label: "Endereço", value: "Rua Exemplo, 123" },
